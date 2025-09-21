@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monster Travel Teletext</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main class="teletext-screen" role="main">
@@ -43,37 +44,94 @@
 
       <div class="divider divider--mid"></div>
 
+      <section class="departures" aria-label="Live departures board">
+        <header class="departures-header">
+          <h2 class="departures-title">Live Departures</h2>
+          <p class="departures-note">Updating every few seconds</p>
+        </header>
+        <div class="departures-board">
+          <button class="departure-row" type="button">
+            <span class="departure-cell departure-cell--flight" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--destination" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--time" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--gate" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--status" aria-hidden="true"></span>
+          </button>
+          <button class="departure-row" type="button">
+            <span class="departure-cell departure-cell--flight" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--destination" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--time" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--gate" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--status" aria-hidden="true"></span>
+          </button>
+          <button class="departure-row" type="button">
+            <span class="departure-cell departure-cell--flight" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--destination" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--time" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--gate" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--status" aria-hidden="true"></span>
+          </button>
+          <button class="departure-row" type="button">
+            <span class="departure-cell departure-cell--flight" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--destination" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--time" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--gate" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--status" aria-hidden="true"></span>
+          </button>
+          <button class="departure-row" type="button">
+            <span class="departure-cell departure-cell--flight" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--destination" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--time" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--gate" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--status" aria-hidden="true"></span>
+          </button>
+          <button class="departure-row" type="button">
+            <span class="departure-cell departure-cell--flight" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--destination" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--time" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--gate" aria-hidden="true"></span>
+            <span class="departure-cell departure-cell--status" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
       <section class="offers">
         <div class="offers-heading">Sunny getaways • 7 nights • departing weekly</div>
         <div class="offers-columns">
           <div class="offer-column">
-            <div class="offer"><span class="destination">Algarve</span><span class="price">£175</span></div>
-            <div class="offer"><span class="destination">Majorca</span><span class="price">£189</span></div>
-            <div class="offer"><span class="destination">Tunisia</span><span class="price">£199</span></div>
-            <div class="offer"><span class="destination">Turkey</span><span class="price">£199</span></div>
-            <div class="offer"><span class="destination">Benidorm</span><span class="price">£203</span></div>
-            <div class="offer"><span class="destination">Greece</span><span class="price">£209</span></div>
-            <div class="offer"><span class="destination">Cyprus</span><span class="price">£234</span></div>
-            <div class="offer"><span class="destination">×4 Malta</span><span class="price">£249</span></div>
-            <div class="offer"><span class="destination">4× C. D. Sol</span><span class="price">£235</span></div>
+            <button class="offer" type="button" data-destination="Algarve" data-price="£175"><span class="destination">Algarve</span><span class="price">£175</span></button>
+            <button class="offer" type="button" data-destination="Majorca" data-price="£189"><span class="destination">Majorca</span><span class="price">£189</span></button>
+            <button class="offer" type="button" data-destination="Tunisia" data-price="£199"><span class="destination">Tunisia</span><span class="price">£199</span></button>
+            <button class="offer" type="button" data-destination="Turkey" data-price="£199"><span class="destination">Turkey</span><span class="price">£199</span></button>
+            <button class="offer" type="button" data-destination="Benidorm" data-price="£203"><span class="destination">Benidorm</span><span class="price">£203</span></button>
+            <button class="offer" type="button" data-destination="Greece" data-price="£209"><span class="destination">Greece</span><span class="price">£209</span></button>
+            <button class="offer" type="button" data-destination="Cyprus" data-price="£234"><span class="destination">Cyprus</span><span class="price">£234</span></button>
+            <button class="offer" type="button" data-destination="Malta" data-price="£249"><span class="destination">×4 Malta</span><span class="price">£249</span></button>
+            <button class="offer" type="button" data-destination="Costa Del Sol" data-price="£235"><span class="destination">4× C. D. Sol</span><span class="price">£235</span></button>
           </div>
           <div class="offer-column">
-            <div class="offer"><span class="destination">G. Canaria</span><span class="price">£249</span></div>
-            <div class="offer"><span class="destination">Tenerife</span><span class="price">£255</span></div>
-            <div class="offer"><span class="destination">F'Ventura</span><span class="price">£255</span></div>
-            <div class="offer"><span class="destination">Lanzarote</span><span class="price">£259</span></div>
-            <div class="offer"><span class="destination">Madeira</span><span class="price">£279</span></div>
-            <div class="offer"><span class="destination">Hurghada</span><span class="price">£289</span></div>
-            <div class="offer"><span class="destination">×4 Sharm</span><span class="price">£309</span></div>
-            <div class="offer"><span class="destination">×4 Taba</span><span class="price">£309</span></div>
-            <div class="offer"><span class="destination">Caribbean</span><span class="price">£659</span></div>
+            <button class="offer" type="button" data-destination="Gran Canaria" data-price="£249"><span class="destination">G. Canaria</span><span class="price">£249</span></button>
+            <button class="offer" type="button" data-destination="Tenerife" data-price="£255"><span class="destination">Tenerife</span><span class="price">£255</span></button>
+            <button class="offer" type="button" data-destination="Fuerteventura" data-price="£255"><span class="destination">F'Ventura</span><span class="price">£255</span></button>
+            <button class="offer" type="button" data-destination="Lanzarote" data-price="£259"><span class="destination">Lanzarote</span><span class="price">£259</span></button>
+            <button class="offer" type="button" data-destination="Madeira" data-price="£279"><span class="destination">Madeira</span><span class="price">£279</span></button>
+            <button class="offer" type="button" data-destination="Hurghada" data-price="£289"><span class="destination">Hurghada</span><span class="price">£289</span></button>
+            <button class="offer" type="button" data-destination="Sharm El Sheikh" data-price="£309"><span class="destination">×4 Sharm</span><span class="price">£309</span></button>
+            <button class="offer" type="button" data-destination="Taba" data-price="£309"><span class="destination">×4 Taba</span><span class="price">£309</span></button>
+            <button class="offer" type="button" data-destination="Caribbean" data-price="£659"><span class="destination">Caribbean</span><span class="price">£659</span></button>
           </div>
         </div>
       </section>
 
+      <section class="cta-panel" aria-live="polite">
+        <p class="cta-panel__prompt">Tap a departure or holiday to preview the details.</p>
+        <p class="cta-panel__selection" data-selection>Choose an option to get started.</p>
+        <a class="cta-panel__action" href="tel:08002802560">Call 0800 280 2560 to book</a>
+      </section>
+
       <div class="message">Call us free for more monster deals</div>
 
-      <div class="phone">0800 280 2560</div>
+      <a class="phone" href="tel:08002802560">0800 280 2560</a>
 
       <footer class="footer">
         <p class="footer-note">
